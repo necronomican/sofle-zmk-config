@@ -38,16 +38,19 @@
         entermod {
             bindings = <&kp ENTER>;
             key-positions = <31 32 33>;
+            timeout-ms = <200>;
         };
 
         escapemod {
             bindings = <&kp ESCAPE>;
             key-positions = <15 16>;
+            timeout-ms = <200>;
         };
 
         bkspcmod {
             bindings = <&kp BACKSPACE>;
             key-positions = <19 20>;
+            timeout-ms = <200>;
         };
     };
 
