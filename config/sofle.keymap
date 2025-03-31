@@ -15,6 +15,7 @@
 #define NAV 2
 #define ADJUST 3
 #define WMNAV 4
+#define EXTRA2 5
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -156,6 +157,17 @@
                 <&inc_dec_kp LG(K) LG(J)>;
         };
 
-        extra2 {};
+        extra2 {
+            display-name = "Extra2";
+            bindings = <
+            &kp GRAVE  &kp N1  &kp N2          &kp N3       &kp N4            &kp N5                          &kp N6     &kp N7        &kp N8       &kp N9           &kp N0    &none
+&to 4      &kp Q   &kp W           &kp E        &kp R             &kp T                           &kp Y      &kp U         &kp I        &kp O            &kp P     &kp BSPC
+&to 5      &kp A   &mt LEFT_GUI S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                           &kp H      &mt RSHIFT J  &mt RCTRL K  &mt RIGHT_GUI L  &kp SEMI  &kp SQT
+&sk LSHFT  &kp Z   &kp X           &kp C        &kp V             &kp B      &kp C_MUTE    &none  &kp N      &kp M         &kp COMMA    &kp DOT          &kp FSLH  &sk RSHFT
+                   &to 0           &sl 1        &kp BACKSPACE     &kp SPACE  &mo 1         &mo 2  &kp ENTER  &kp DEL       &tog 2       &to 0
+            >;
+    
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
     };
 };
