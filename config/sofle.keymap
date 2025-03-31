@@ -27,6 +27,25 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        tabmod {
+            bindings = <&kp TAB>;
+            key-positions = <26 26 27 28>;
+        };
+
+        entermod {
+            bindings = <&kp ENTER>;
+            key-positions = <31 32 33>;
+        };
+
+        escapemod {
+            bindings = <&kp ESCAPE>;
+            key-positions = <16 15 16>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
