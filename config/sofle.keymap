@@ -115,7 +115,9 @@
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp LA(LC(RIGHT)) LA(LC(LEFT))>,
+                <&inc_dec_kp LA(LC(LS(RIGHT_ARROW))) LS(LA(LC(LEFT_ARROW)))>;
         };
 
         adjust_layer {
@@ -136,7 +138,12 @@
             >;
         };
 
-        extra1 { status = "reserved"; };
+        wmnav {
+            status = "reserved";
+            sensor-bindings =
+                <&inc_dec_kp LG(J) LG(H)>,
+                <&inc_dec_kp LG(K) LG(J)>;
+        };
 
         extra2 { status = "reserved"; };
     };
