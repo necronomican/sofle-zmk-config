@@ -130,7 +130,7 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE  &kp N1  &kp N2                 &kp N3              &kp N4                 &kp N5                                                &kp N6              &kp N7                  &kp N8              &kp N9                  &kp N0    &none
+&kp GRAVE  &kp N1  &kp N2                 &kp N3              &kp N4                 &kp N5                                                &kp N6              &kp N7                  &kp N8              &kp N9                  &kp N0    &ext_power EP_TOG
 &to 4      &kp Q   &kp W                  &kp E               &kp R                  &kp T                                                 &kp Y               &kp U                   &kp I               &kp O                   &kp P     &kp BSPC
 &to 5      &kp A   &mt_simple LEFT_ALT S  &mt_simple LCTRL D  &mt_simple LEFT_GUI F  &kp G                                                 &kp H               &mt_simple RIGHT_GUI J  &mt_simple RCTRL K  &mt_simple RIGHT_ALT L  &kp SEMI  &kp SQT
 &sk LSHFT  &kp Z   &kp X                  &kp C               &kp V                  &kp B                   &kp C_MUTE        &none       &kp N               &kp M                   &kp COMMA           &kp DOT                 &kp FSLH  &sk RSHFT
