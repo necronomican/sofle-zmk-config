@@ -25,7 +25,7 @@
 
         adjust_layer {
             if-layers = <2 1>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
 
@@ -80,7 +80,7 @@
 &kp CAPS   &kp Q   &kp W           &kp E        &kp R           &kp T                                          &kp Y        &kp U       &kp I        &kp O            &kp P     &kp BSPC
 &none      &kp A   &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_GUI F  &kp G                                          &kp H        &mt RGUI J  &mt RCTRL K  &mt RIGHT_ALT L  &kp SEMI  &kp SQT
 &sk LSHFT  &kp Z   &kp X           &kp C        &kp V           &kp B            &kp C_MUTE        &none       &kp N        &kp M       &kp COMMA    &kp DOT          &kp FSLH  &sk RSHFT
-                   &to 0           &sl 2        &mo 4           &lt 1 BACKSPACE  &kp LEFT_SHIFT    &kp RSHIFT  &lt 2 SPACE  &mo 5       &tog 1       &to 0
+                   &to 0           &sl 2        &mo 1           &lt 1 BACKSPACE  &kp LEFT_SHIFT    &kp RSHIFT  &lt 2 SPACE  &mo 3       &tog 1       &to 0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -106,7 +106,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp LG(LC(UP_ARROW)) LG(LC(DOWN))>,
-                <&inc_dec_kp LS(LG(UP_ARROW)) LS(LG(DOWN))>;
+                <&inc_dec_kp LS(LG(LEFT_ARROW)) LS(LG(RIGHT))>;
         };
 
         sym {
@@ -131,6 +131,18 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
+        FKEYS {
+            bindings = <
+&trans  &trans   &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &kp F1   &kp F2  &kp F3  &kp F4  &kp F5                        &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &kp F11  &trans  &trans  &trans  &kp LC(F5)                    &trans  &trans  &trans  &trans  &kp F11  &trans
+&trans  &kp F12  &trans  &trans  &trans  &trans      &trans    &trans  &trans  &trans  &trans  &trans  &kp F10  &trans
+                 &trans  &trans  &trans  &trans      &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "FKEYs";
+        };
+
         adjust_layer {
             // ----------------------------------------------------------------------------------------------------------------------------
             // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
@@ -147,35 +159,10 @@
 &none       &none            &none            &none            &none            &none            &none    &none  &none              &none            &none  &none  &none  &none
                              &none            &none            &none            &none            &none    &none  &none              &none            &none  &none
             >;
-        };
-
-        wmnav {
-            display-name = "wmnav";
-            bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4         &kp N5                          &kp N6     &kp N7   &kp N8     &kp N9   &kp N0    &none
-&to 4      &kp Q   &ctrlw  &kp E   &altf4         &altf2                          &kp Y      &kp U    &kp I      &kp O    &kp P     &kp BSPC
-&to 5      &kp A   &trans  &trans  &trans         &kp G                           &kp H      &trans   &trans     &trans   &kp SEMI  &kp SQT
-&sk LSHFT  &kp Z   &kp X   &kp C   &kp V          &kp B      &kp C_MUTE    &none  &kp N      &kp M    &kp COMMA  &kp DOT  &kp FSLH  &sk RSHFT
-                   &to 0   &sl 2   &kp BACKSPACE  &kp SPACE  &mo 2         &mo 1  &kp ENTER  &kp DEL  &tog 1     &to 0
-            >;
 
             sensor-bindings =
-                <&inc_dec_kp LG(LS(RIGHT)) LG(LS(LEFT))>,
-                <&inc_dec_kp LG(K) LG(J)>;
-        };
-
-        func {
-            display-name = "Func";
-            bindings = <
-&kp GRAVE  &kp N1  &kp N2          &kp N3       &kp N4            &kp N5                          &kp N6     &kp N7        &kp N8       &kp N9           &kp N0    &none
-&to 4      &kp Q   &kp W           &kp E        &kp R             &kp T                           &kp Y      &kp U         &kp I        &kp O            &kp P     &kp BSPC
-&to 5      &kp A   &mt LEFT_GUI S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                           &kp H      &mt RSHIFT J  &mt RCTRL K  &mt RIGHT_GUI L  &kp SEMI  &kp SQT
-&sk LSHFT  &kp Z   &kp X           &kp C        &kp V             &kp B      &kp C_MUTE    &none  &kp N      &kp M         &kp COMMA    &kp DOT          &kp FSLH  &sk RSHFT
-                   &to 0           &sl 2        &kp BACKSPACE     &kp SPACE  &mo 2         &mo 1  &kp ENTER  &kp DEL       &tog 1       &to 0
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-            label = "FUNC";
+                <&inc_dec_kp C_MENU_INCREASE C_MENU_DECREASE>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
     };
 };
