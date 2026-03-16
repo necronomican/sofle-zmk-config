@@ -55,11 +55,6 @@
             key-positions = <19 20 21>;
             timeout-ms = <200>;
         };
-
-        wlock {
-            bindings = <&lockcomp>;
-            key-positions = <1 2 3 4>;
-        };
     };
 
     keymap {
@@ -163,6 +158,16 @@
             sensor-bindings =
                 <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>,
                 <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
