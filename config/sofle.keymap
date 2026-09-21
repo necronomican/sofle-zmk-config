@@ -27,6 +27,14 @@
             bindings = <&kp>, <&kp>;
         };
 
+        hrm800: hrm800 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <800>;
+            bindings = <&kp>, <&kp>;
+        };
+
         hrm1000: hrm1000 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -91,7 +99,7 @@
             bindings = <
 &kp GRAVE  &kp N1  &kp N2          &kp N3       &kp N4          &kp N5                                         &kp N6       &kp N7      &kp N8       &kp N9           &kp N0    &kp N0
 &kp CAPS   &kp Q   &kp W           &kp E        &kp R           &kp T                                          &kp Y        &kp U       &kp I        &kp O            &kp P     &kp BSPC
-&none      &kp A   &hrm400 LEFT_ALT S  &hrm400 LCTRL D  &hrm400 LEFT_GUI F  &kp G                                          &kp H        &hrm400 RGUI J  &hrm400 RCTRL K  &hrm1000 RIGHT_ALT L  &kp SEMI  &kp SQT
+&none      &kp A   &hrm400 LEFT_ALT S  &hrm800 LCTRL D  &hrm800 LEFT_GUI F  &kp G                                          &kp H        &hrm800 RGUI J  &hrm800 RCTRL K  &hrm1000 RIGHT_ALT L  &kp SEMI  &kp SQT
 &sk LSHFT  &kp Z   &kp X           &kp C        &kp V           &kp B            &kp C_MUTE        &none       &kp N        &kp M       &kp COMMA    &kp DOT          &kp FSLH  &sk RSHFT
                    &to 0           &sl 2        &mo 1           &lt 1 BACKSPACE  &kp LEFT_SHIFT    &kp RSHIFT  &lt 2 SPACE  &mo 3       &tog 1       &to 0
             >;
