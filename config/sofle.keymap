@@ -17,6 +17,11 @@
 #define WMNAV 4
 #define EXTRA2 5
 
+// Home row mods (S/D/F and J/K/L) use &mt; widen the hold window from the 200ms default.
+&mt {
+    tapping-term-ms = <280>;
+};
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
