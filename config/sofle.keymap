@@ -19,18 +19,20 @@
 
 / {
     behaviors {
-        hrm400: mod-tap {
-            compatible = "zmk,behavior-mod-tap";
+        hrm400: hrm400 {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
             flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            bindings = <&kp>, <&kp>;
         };
 
-        hrm1000: mod-tap {
-            compatible = "zmk,behavior-mod-tap";
+        hrm1000: hrm1000 {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <1000>;
             flavor = "hold-preferred";
+            tapping-term-ms = <1000>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
